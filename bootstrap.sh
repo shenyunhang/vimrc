@@ -156,7 +156,7 @@ setup_vundle() {
 #        "+BundleClean" \
 #        "+qall"
 
-    vim +Pluginstall +qall
+    vim +PluginInstall +qall
     export SHELL="$system_shell"
 
     success "Now updating/installing plugins using Vundle"
