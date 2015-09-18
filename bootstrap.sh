@@ -119,7 +119,7 @@ create_symlinks() {
         lnif "$source_path/.vimrc"     "$target_path/.nvim/nvimrc"
     fi
 
-    touch  "$target_path/.vimrc.local"
+    #touch  "$target_path/.vimrc.local"
 
     ret="$?"
     success "Setting up vim symlinks."
@@ -149,13 +149,14 @@ setup_vundle() {
     local system_shell="$SHELL"
     export SHELL='/bin/sh'
 
-    vim \
+#    vim \
 #        -u "$1" \
-        "+set nomore" \
-        "+BundleInstall!" \
-        "+BundleClean" \
-        "+qall"
+#        "+set nomore" \
+#        "+BundleInstall!" \
+#        "+BundleClean" \
+#        "+qall"
 
+    vim +Pluginstall +qall
     export SHELL="$system_shell"
 
     success "Now updating/installing plugins using Vundle"
@@ -183,7 +184,7 @@ setup_fork_mode "$fork_maintainer" \
                 "$APP_PATH" \
                 "$HOME"
 
-sync_repo       "$HOME/.vim/bundle/vundle" \
+sync_repo       "$HOME/.vim/bundle/Vundle.vim" \
                 "$VUNDLE_URI" \
                 "master" \
                 "vundle"
