@@ -1,5 +1,11 @@
-"====================================================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <F3> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vundel setting
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -17,6 +23,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 "Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
