@@ -97,7 +97,7 @@ sync_repo() {
         success "Successfully cloned $repo_name."
     else
         #cd "$repo_path" && git pull origin "$repo_branch"
-        cd "$repo_path" && git pull origin master
+        cd "$repo_path" && git reset --hard HEAD && git pull origin master
         ret="$?"
         success "Successfully updated $repo_name"
     fi
@@ -170,6 +170,7 @@ program_must_exist "git"
 program_must_exist "pip"
 program_must_exist "autopep8"
 
+msg             "going to install Jedi - an awesome autocompletion/static analysis library for Python"
 sudo pip install jedi
 
 
