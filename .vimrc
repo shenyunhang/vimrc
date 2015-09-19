@@ -1,8 +1,41 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+"常规
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nu
+set cul
+set ruler
+set scrolloff=3 "光标移动到buffer的底部和顶部时保持3行距离
+set langmenu=zh_CN.UTF-8
+set showmatch
+:syntax on
+"让vim记忆上次编辑的位置
+autocmd BufReadPost *
+			\ if line("'\"")>0&&line("'\"")<=line("$") |
+			\	exe "normal g'\"" |
+			\endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"jedi-vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:jedi#popup_on_dot = 0
+"let g:jedi#show_call_signatures = "2"
+"let g:jedi#use_splits_not_buffers = "right"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"快捷键
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F3> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+map <F11> :call FormartSrc()<CR>
+"define FormartSrc()
+func FormartSrc()
+	exec "w"
+	if &filetype == 'py'||&filetype == 'python'
+		exec "r !autopep8 -i --aggressive %"
+	else
+		exec "normal g=G"
+	endif
+	exec "e! %"
+endfunc
+"end FormartSrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vundel setting
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -24,6 +57,8 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
+Plugin 'davidhalter/jedi-vim'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 " Git plugin not hosted on GitHub
