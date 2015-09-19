@@ -168,7 +168,7 @@ variable_set "$HOME"
 program_must_exist "vim"
 program_must_exist "git"
 program_must_exist "pip"
-program_must_exist "utopep8'
+program_must_exist "utopep8"
 
 sudo pip install jedi
 
