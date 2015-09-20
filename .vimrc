@@ -13,12 +13,25 @@ autocmd BufReadPost *
 			\ if line("'\"")>0&&line("'\"")<=line("$") |
 			\	exe "normal g'\"" |
 			\endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Python代码折叠
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=indent
+set foldlevel=99 
+" press space to fold/unfold code
+nnoremap <space> za
+vnoremap <space> zf
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "jedi-vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:jedi#popup_on_dot = 0
 "let g:jedi#show_call_signatures = "2"
 "let g:jedi#use_splits_not_buffers = "right"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Plugin 'Rip-Rip/clang_complete'设置
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:clang_library_path='/usr/lib/llvm-3.6/lib/libclang.so'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "快捷键
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -30,14 +43,16 @@ func FormartSrc()
 	exec "w"
 	if &filetype == 'py'||&filetype == 'python'
 		exec "r !autopep8 -i --aggressive %"
+	elseif &filetype == 'c'||&filetype == 'cpp' ||&filetype =='h'
+		exec "normal gg=G"
 	else
-		exec "normal g=G"
+		exec "normal gg=G"
 	endif
 	exec "e! %"
 endfunc
 "end FormartSrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vundel setting
+"vundel插件管理设置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -58,6 +73,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'Valloric/YouCompleteMe'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
