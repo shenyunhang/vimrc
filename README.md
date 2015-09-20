@@ -2,4 +2,4 @@
 针对C++/Python的Vim配置
 
 ###安装方法
-wget -qO- https://raw.github.com/shenyunhang/vim/master/bootstrap.sh | sh -x
+curl https://raw.github.com/shenyunhang/vim/master/bootstrap.sh -L > shenyunhang-vim.sh && sh shenyunhang-vim.sh
