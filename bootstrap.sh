@@ -170,7 +170,7 @@ program_must_exist "git"
 program_must_exist "pip"
 program_must_exist "autopep8"
 
-msg             "going to install Jedi - an awesome autocompletion/static analysis library for Python"
+msg             "Going to install Jedi - an awesome autocompletion/static analysis library for Python"
 sudo pip install jedi
 
 
