@@ -198,9 +198,9 @@ sync_repo       "$HOME/.vim/bundle/Vundle.vim" \
 setup_vundle    "$APP_PATH/.vimrc.bundles.default"
 
 #编译youcompleteme插件
-cd $HOME/.vim/bundle/YouCompleteMe/
+#cd $HOME/.vim/bundle/YouCompleteMe/
 #./install.py
-./install.py --clang-completer
+#./install.py --clang-completer
 #编译youcompleteme插件
 
 msg             "\nThanks for installing $app_name."
