@@ -48,7 +48,7 @@ program_must_exist() {
 
     # throw error on non-zero return value
     if [ "$?" -ne 0 ]; then
-        error "You must have '$1' installed to continue."
+        error "You must have '$1' installed to continue.\n$2"
     fi
 }
 
@@ -168,7 +168,8 @@ variable_set "$HOME"
 program_must_exist "vim"
 program_must_exist "git"
 program_must_exist "pip"
-program_must_exist "autopep8"
+program_must_exist "pep8" "you can install with pip: pip install pep8"
+program_must_exist "autopep8" "you can install with pip: pip install autopep8"
 
 msg             "Going to install Jedi - an awesome autocompletion/static analysis library for Python"
 sudo pip install jedi
