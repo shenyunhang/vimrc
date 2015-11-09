@@ -9,6 +9,7 @@ set langmenu=zh_CN.UTF-8
 "set mouse=a
 set mouse=n
 set showmatch
+set hlsearch
 :syntax on
 "让vim记忆上次编辑的位置
 autocmd BufReadPost *
