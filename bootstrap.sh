@@ -166,6 +166,7 @@ setup_vundle() {
 ############################ MAIN()
 variable_set "$HOME"
 program_must_exist "vim"
+program_must_exist "ctags"
 program_must_exist "git"
 program_must_exist "pip"
 program_must_exist "pep8" "you can install with pip: pip install pep8"
