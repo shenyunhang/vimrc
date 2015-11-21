@@ -28,7 +28,10 @@ autocmd BufReadPost *
 " " a combination of spaces and tabs are used to simulate tab stops at a width
 " " other than the (hard)tabstop
 "set softtabstop=4
-
+"
+" 自动检测文件类型并加载相应的设置
+filetype plugin indent on
+autocmd FileType python setlocal et sta sw=4 sts=4
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "ctags
@@ -63,7 +66,10 @@ nnoremap <F6> zR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F3> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
-map <F11> :call FormartSrc()<CR>
+map <F8> :call FormartSrc()<CR>
+map <F7> :tabnew<CR>
+
+
 "define FormartSrc()
 func FormartSrc()
 	exec "w"
