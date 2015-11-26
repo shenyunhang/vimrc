@@ -6,3 +6,16 @@
 	sh <(curl https://raw.github.com/shenyunhang/vim/master/bootstrap.sh -L)
 ```
 
+###快捷键
+
+F3 打开文件树
+
+F4 打开函数树
+
+F5 python全部折叠
+
+F6 python全部展开
+
+F7 新建Tab
+
+F8 格式化代码
