@@ -1,6 +1,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "常规设置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set background=dark
+"set background=light
+"colorscheme default
 set nu
 set cul
 set ruler
@@ -16,6 +19,15 @@ autocmd BufReadPost *
 			\ if line("'\"")>0&&line("'\"")<=line("$") |
 			\	exe "normal g'\"" |
 			\endif
+
+"开启光亮光标行
+set cursorline
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
+"开启高亮光标列
+set cursorcolumn
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "缩进设置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -52,6 +64,15 @@ vnoremap <space> zf
 nnoremap <F5> zM
 nnoremap <F6> zR
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Plugin 'nathanaelkane/vim-indent-guides'设置
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:indent_guides_enable_on_vim_startup=1
+"let g:indent_guides_start_level=2
+"hi IndentGuidesOdd  ctermbg=black
+"hi IndentGuidesEven ctermbg=darkgrey
+"let g:indent_guides_auto_colors = 1
+"let g:indent_guides_guide_size = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugin 'davidhalter/jedi-vim'设置
@@ -123,6 +144,8 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
+
+"Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
