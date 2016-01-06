@@ -22,7 +22,7 @@ autocmd BufReadPost *
 
 "开启光亮光标行
 set cursorline
-hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 "开启高亮光标列
 set cursorcolumn
