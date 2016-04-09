@@ -87,7 +87,8 @@ nnoremap <F6> zR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F3> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
-map <F8> :call FormartSrc()<CR>
+"map <F8> :call FormartSrc()<CR>
+noremap <F8> :Autoformat<CR>
 map <F7> :tabnew<CR>
 
 
@@ -132,6 +133,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Shougo/neocomplete.vim'
 "Plugin 'ervandew/supertab'
+Plugin 'Chiel92/vim-autoformat'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "Plugin 'AutoComplPop'
