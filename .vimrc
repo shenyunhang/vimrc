@@ -107,6 +107,23 @@ endfunc
 "end FormartSrc
 
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"函数注释文档生成
+"vim-scripts/DoxygenToolkit.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:DoxygenToolkit_briefTag_pre="@Synopsis  "
+let g:DoxygenToolkit_paramTag_pre="@Param "
+let g:DoxygenToolkit_returnTag="@Returns   "
+let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------"
+let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------"
+let g:DoxygenToolkit_authorName="Shen Yunhang"
+let g:DoxygenToolkit_licenseTag="YH license"
+map dox : Dox<cr>
+
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vundel插件管理设置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -134,6 +151,9 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Shougo/neocomplete.vim'
 "Plugin 'ervandew/supertab'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+"doc/NERD_commenter.txt 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "Plugin 'AutoComplPop'
