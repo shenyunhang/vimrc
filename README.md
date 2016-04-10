@@ -22,11 +22,11 @@ F8 格式化代码
 
 dox 在函数前面添加注释说明
 
-\cc 注释一行
+<leader>cc 注释一行
 
-\cu 反注释一行
+<leader>cu 反注释一行
 
-n\cc 注释n行
+n<leader>cc 注释n行
 
-n\cu 反注释n行
+n<leader>cu 反注释n行
 
