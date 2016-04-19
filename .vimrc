@@ -87,8 +87,8 @@ nnoremap <F6> zR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F3> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
-"map <F8> :call FormartSrc()<CR>
-noremap <F8> :Autoformat<CR>
+noremap <F9> :Autoformat<CR>
+"map <F9> :Autopep8<CR>
 map <F7> :tabnew<CR>
 
 
@@ -116,7 +116,7 @@ let g:DoxygenToolkit_briefTag_pre="@Synopsis  "
 let g:DoxygenToolkit_paramTag_pre="@Param "
 let g:DoxygenToolkit_returnTag="@Returns   "
 let g:DoxygenToolkit_blockHeader="--------------------------------------------------------------------------"
-let g:DoxygenToolkit_blockFooter="----------------------------------------------------------------------------"
+let g:DoxygenToolkit_blockFooter="--------------------------------------------------------------------------"
 let g:DoxygenToolkit_authorName="Shen Yunhang"
 let g:DoxygenToolkit_licenseTag="YH license"
 map dox : Dox<cr>
@@ -153,6 +153,9 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'tell-k/vim-autopep8'
+
 "doc/NERD_commenter.txt 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
