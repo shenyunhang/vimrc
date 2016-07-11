@@ -155,6 +155,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'tell-k/vim-autopep8'
+Plugin 'lervag/vimtex'
 
 "doc/NERD_commenter.txt 
 " plugin from http://vim-scripts.org/vim/scripts.html
