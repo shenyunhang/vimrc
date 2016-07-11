@@ -1,4 +1,34 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"windows下的设置
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set backspace=indent,eol,start
+
+if has("gui_running")
+	"设置字体
+	"set guifont=楷体:h10:cGB2312
+	"set guifont=KaiTi:h10:cGB2312
+	"set guifont=DejaVu\ Sans\ Mono:h11:cGREEK
+	set encoding=utf-8
+	set fileencodings=utf-8,chinese,latin-1
+
+	if has("win32")
+		set fileencoding=chinese
+	else
+		set fileencoding=utf-8
+	endif
+
+	let &termencoding=&encoding
+
+	"解决菜单乱码
+	source $VIMRUNTIME/delmenu.vim
+	source $VIMRUNTIME/menu.vim
+
+	"解决consle输出乱码
+	language messages zh_CN.utf-8
+endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "常规设置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set background=dark
@@ -57,7 +87,7 @@ set tags+=~/.vim/systags
 "Python代码折叠
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set foldmethod=indent
-set foldlevel=99 
+set foldlevel=99
 " press space to fold/unfold code
 nnoremap <space> za
 vnoremap <space> zf
@@ -156,7 +186,7 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'tell-k/vim-autopep8'
 
-"doc/NERD_commenter.txt 
+"doc/NERD_commenter.txt
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "Plugin 'AutoComplPop'
