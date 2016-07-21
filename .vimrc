@@ -1,7 +1,76 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vundel插件管理设置
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'davidhalter/jedi-vim'
+"Plugin 'Rip-Rip/clang_complete'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Shougo/neocomplete.vim'
+"Plugin 'ervandew/supertab'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'lervag/vimtex'
+
+Plugin 'flazz/vim-colorschemes'
+"Plugin 'altercation/vim-colors-solarized'
+
+"doc/NERD_commenter.txt
+" plugin from http://vim-scripts.org/vim/scripts.html
+"Plugin 'L9'
+"Plugin 'AutoComplPop'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+"Plugin 'user/L9', {'name': 'newL9'}
+
+"Plugin 'nathanaelkane/vim-indent-guides'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "windows下的设置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set backspace=indent,eol,start
+
 
 if has("gui_running")
 	"设置字体
@@ -25,15 +94,24 @@ if has("gui_running")
 
 	"解决consle输出乱码
 	language messages zh_CN.utf-8
+
+	set background=light
+else
+	set t_Co=256
+	set background=dark
 endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "常规设置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme solarized
+"colorscheme molokai
+
 "set background=dark
 "set background=light
 "colorscheme default
+syntax enable
 set nu
 set cul
 set ruler
@@ -43,7 +121,6 @@ set langmenu=zh_CN.UTF-8
 set mouse=n
 set showmatch
 set hlsearch
-:syntax on
 "让vim记忆上次编辑的位置
 autocmd BufReadPost *
 			\ if line("'\"")>0&&line("'\"")<=line("$") |
@@ -154,66 +231,4 @@ map dox : Dox<cr>
 
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vundel插件管理设置
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'davidhalter/jedi-vim'
-"Plugin 'Rip-Rip/clang_complete'
-Plugin 'Valloric/YouCompleteMe'
-"Plugin 'Shougo/neocomplete.vim'
-"Plugin 'ervandew/supertab'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'tell-k/vim-autopep8'
-Plugin 'lervag/vimtex'
-
-"doc/NERD_commenter.txt
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-"Plugin 'AutoComplPop'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
-
-"Plugin 'nathanaelkane/vim-indent-guides'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
