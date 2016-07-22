@@ -105,13 +105,13 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "常规设置
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme solarized
-"colorscheme molokai
+syntax enable
+"colorscheme solarized
+colorscheme molokai
 
 "set background=dark
 "set background=light
 "colorscheme default
-syntax enable
 set nu
 set cul
 set ruler
@@ -133,7 +133,7 @@ set cursorline
 
 "开启高亮光标列
 set cursorcolumn
-hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi Cursorcolumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "缩进设置
