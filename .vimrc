@@ -34,6 +34,8 @@ Plugin 'lervag/vimtex'
 Plugin 'flazz/vim-colorschemes'
 "Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'wesQ3/vim-windowswap'
+
 "doc/NERD_commenter.txt
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
