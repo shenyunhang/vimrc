@@ -128,10 +128,10 @@ create_symlinks() {
     #lnif "$source_path/.vimrc.before"  "$target_path/.vimrc.before"
     lnif "$source_path/.vim"           "$target_path/.vim"
 
-    if program_exists "nvim"; then
-        lnif "$source_path/.vim"       "$target_path/.nvim"
-        lnif "$source_path/.vimrc"     "$target_path/.nvim/nvimrc"
-    fi
+    #if program_exists "nvim"; then
+    #    lnif "$source_path/.vim"       "~/.config/nvim"
+    #    lnif "$source_path/.vimrc"     "~/.config/nvim/init.vim"
+    #fi
 
     #touch  "$target_path/.vimrc.local"
 
@@ -177,6 +177,13 @@ setup_vundle() {
     debug
 }
 
+setup_nvim() {
+    mkdir -p ~/.config
+    ln -s ~/.vim ~/.config/nvim
+    ln -s ~/.vimrc ~/.config/nvim/init.vim
+    success "Setting up nvim"
+}
+
 ############################ MAIN()
 variable_set "$HOME"
 program_must_exist "vim"
@@ -211,7 +218,11 @@ sync_repo       "$HOME/.vim/bundle/Vundle.vim" \
                 "master" \
                 "vundle"
 
+setup_nvim
+
 setup_vundle    "$APP_PATH/.vimrc.bundles.default"
+
+
 
 #编译youcompleteme插件
 msg "编译YouCompleteMe插件"
