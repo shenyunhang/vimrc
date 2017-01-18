@@ -24,7 +24,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Shougo/neocomplete.vim'
 "Plugin 'ervandew/supertab'
-Plugin 'Chiel92/vim-autoformat'
+"Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'hynek/vim-python-pep8-indent'
@@ -196,7 +196,8 @@ nnoremap <F6> zR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F3> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
-noremap <F9> :Autoformat<CR>
+"noremap <F9> :Autoformat<CR>
+noremap <F9> :call FormartSrc()<CR>
 "map <F9> :Autopep8<CR>
 map <F7> :tabnew<CR>
 
@@ -205,9 +206,10 @@ map <F7> :tabnew<CR>
 func FormartSrc()
 	exec "w"
 	if &filetype == 'py'||&filetype == 'python'
-		exec "r !autopep8 -i --aggressive %"
-	elseif &filetype == 'c'||&filetype == 'cpp' ||&filetype =='h'
-		exec "normal gg=G"
+		"exec "r !autopep8 -i --aggressive %"
+		exec "!autopep8 -i --aggressive %"
+	elseif &filetype == 'c'||&filetype == 'cpp' ||&filetype== 'cu' ||&filetype == 'h' ||&filetype == 'hpp'
+		exec "!clang-format -i -style Google %"
 	else
 		exec "normal gg=G"
 	endif
@@ -229,8 +231,3 @@ let g:DoxygenToolkit_blockFooter="----------------------------------------------
 let g:DoxygenToolkit_authorName="Shen Yunhang"
 let g:DoxygenToolkit_licenseTag="YH license"
 map dox : Dox<cr>
-
-
-
-
-
