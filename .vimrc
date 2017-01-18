@@ -201,6 +201,10 @@ noremap <F9> :call FormartSrc()<CR>
 "map <F9> :Autopep8<CR>
 map <F7> :tabnew<CR>
 
+" CUDA filetype
+"au BufNewFile,BufRead *.cu set ft=cu
+" Map cuda files to c++
+autocmd BufNewFile,BufRead *.cu set filetype=cpp
 
 "define FormartSrc()
 func FormartSrc()
@@ -208,7 +212,7 @@ func FormartSrc()
 	if &filetype == 'py'||&filetype == 'python'
 		"exec "r !autopep8 -i --aggressive %"
 		exec "!autopep8 -i --aggressive %"
-	elseif &filetype == 'c'||&filetype == 'cpp' ||&filetype== 'cu' ||&filetype == 'h' ||&filetype == 'hpp'
+	elseif &filetype == 'c'||&filetype == 'cpp'||&filetype == 'h'||&filetype == 'hpp'
 		exec "!clang-format -i -style Google %"
 	else
 		exec "normal gg=G"
