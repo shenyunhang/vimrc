@@ -18,7 +18,7 @@
 app_name='shenyunhang-vimrc'
 [ -z "$APP_PATH" ] && APP_PATH="$HOME/.shenyunhang-vimrc"
 [ -z "$REPO_URI" ] && REPO_URI='https://github.com/shenyunhang/vimrc.git'
-[ -z "$REPO_BRANCH" ] && REPO_BRANCH='3.0'
+[ -z "$REPO_BRANCH" ] && REPO_BRANCH='0.1'
 debug_mode='0'
 fork_maintainer='0'
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/VundleVim/Vundle.vim"
