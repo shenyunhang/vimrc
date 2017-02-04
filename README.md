@@ -3,7 +3,7 @@
 
 ###安装方法
 ```bash
-	sh <(curl https://raw.github.com/shenyunhang/vim/master/bootstrap.sh -L)
+	sh <(curl https://raw.github.com/shenyunhang/vimrc/master/bootstrap.sh -L)
 ```
 
 ###快捷键
