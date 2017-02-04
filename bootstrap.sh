@@ -15,9 +15,9 @@
 #   limitations under the License.
 
 ############################  SETUP PARAMETERS
-app_name='shenyunhang-vim'
-[ -z "$APP_PATH" ] && APP_PATH="$HOME/.shenyunhang-vim"
-[ -z "$REPO_URI" ] && REPO_URI='https://github.com/shenyunhang/vim.git'
+app_name='shenyunhang-vimrc'
+[ -z "$APP_PATH" ] && APP_PATH="$HOME/.shenyunhang-vimrc"
+[ -z "$REPO_URI" ] && REPO_URI='https://github.com/shenyunhang/vimrc.git'
 [ -z "$REPO_BRANCH" ] && REPO_BRANCH='3.0'
 debug_mode='0'
 fork_maintainer='0'
