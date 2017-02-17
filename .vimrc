@@ -221,6 +221,13 @@ func FormartSrc()
 endfunc
 "end FormartSrc
 
+" show Todo list
+"command TODO noautocmd vimgrep /TODO\|FIXME/j ** | cw
+
+" recursively in all subdirectories of the current directory
+command TODO noautocmd vimgrep /TODO/j ** | cw
+" only in the current file
+command Todo noautocmd vimgrep /TODO/j % | cw
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
