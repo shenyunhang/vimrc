@@ -165,8 +165,10 @@ set tags+=~/.vim/systags
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Python代码折叠
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set foldmethod=indent
-set foldlevel=99
+set foldmethod=syntax
+set foldnestmax=20
+set nofoldenable
+set foldlevel=1
 " press space to fold/unfold code
 nnoremap <space> za
 vnoremap <space> zf
