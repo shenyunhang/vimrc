@@ -172,8 +172,23 @@ set foldlevel=1
 " press space to fold/unfold code
 nnoremap <space> za
 vnoremap <space> zf
-nnoremap <F5> zM
+"nnoremap <F5> zM
+nnoremap <F5> :call FoldFile()<CR>
 nnoremap <F6> zR
+
+
+"define FoldFile()
+func FoldFile()
+	if &filetype == 'py'||&filetype == 'python'
+		set foldmethod=indent
+	elseif &filetype == 'c'||&filetype == 'cpp'||&filetype == 'h'||&filetype == 'hpp'
+		set foldmethod=syntax
+	else
+		set foldmethod=syntax
+	endif
+	exec "normal zM"
+endfunc
+"end FoldFile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugin 'nathanaelkane/vim-indent-guides'设置
