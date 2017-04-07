@@ -36,6 +36,8 @@ Plugin 'flazz/vim-colorschemes'
 
 Plugin 'wesQ3/vim-windowswap'
 
+Plugin 'jiangmiao/auto-pairs'
+
 "doc/NERD_commenter.txt
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -233,6 +235,8 @@ func FormartSrc()
 		exec "!clang-format -i -style Google %"
 	else
 		exec "normal gg=G"
+		exec "w"
+		return
 	endif
 	exec "e! %"
 endfunc
