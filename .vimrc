@@ -263,3 +263,8 @@ let g:DoxygenToolkit_blockFooter="----------------------------------------------
 let g:DoxygenToolkit_authorName="Shen Yunhang"
 let g:DoxygenToolkit_licenseTag="YH license"
 map dox : Dox<cr>
+
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
