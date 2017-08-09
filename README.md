@@ -1,12 +1,12 @@
 # vim
 针对C++/Python的Vim配置
 
-###安装方法
+### 安装方法
 ```bash
 sh <(curl https://raw.github.com/shenyunhang/vimrc/master/bootstrap.sh -L)
 ```
 
-###快捷键
+### 快捷键
 
 F3 打开文件树
 
@@ -18,9 +18,7 @@ F6 python全部展开
 
 F7 新建Tab
 
-F8 格式化Python代码
-
-F8 格式化C++代码
+F9 格式化代码
 
 dox 在函数前面添加注释说明
 
