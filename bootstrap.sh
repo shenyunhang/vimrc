@@ -230,7 +230,8 @@ setup_vundle    "$APP_PATH/.vimrc.bundles.default"
 msg "编译YouCompleteMe插件"
 cd $HOME/.vim/bundle/YouCompleteMe/
 #./install.py
-./install.py --clang-completer
+#./install.py --clang-completer
+./install.py --clang-completer --system-libclang
 lnif "$APP_PATH/.ycm_extra_conf.py"         "$HOME/.ycm_extra_conf.py"
 #编译youcompleteme插件
 
