@@ -230,9 +230,10 @@ func FormartSrc()
 	exec "w"
 	if &filetype == 'py'||&filetype == 'python'
 		"exec "r !autopep8 -i --aggressive %"
-		exec "!autopep8 -i --aggressive %"
+		"exec "!autopep8 -i --aggressive %"
+		exec "r !yapf -i --style pep8 %"
 	elseif &filetype == 'c'||&filetype == 'cpp'||&filetype == 'h'||&filetype == 'hpp'
-		exec "!clang-format -i -style Google %"
+		exec "r !clang-format -i -style Google %"
 	else
 		exec "normal gg=G"
 		exec "w"
