@@ -100,19 +100,22 @@ if has("gui_running")
 	"解决consle输出乱码
 	language messages zh_CN.utf-8
 
-	set background=light
 else
 	set t_Co=256
-	set background=dark
 endif
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "color scheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=dark
+"set background=light
+"colorscheme default
 "colorscheme solarized
-"colorscheme molokai
-colorscheme onedark
+colorscheme molokai
+"colorscheme onedark
+"colorscheme github
+
 if &diff
 	colorscheme github
 endif
@@ -138,9 +141,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 
-"set background=dark
-"set background=light
-"colorscheme default
 set nu
 set cul
 set ruler
@@ -162,7 +162,7 @@ hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 "开启高亮光标列
 set cursorcolumn
-"hi Cursorcolumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi Cursorcolumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "缩进设置
@@ -291,6 +291,6 @@ let g:DoxygenToolkit_licenseTag="YH license"
 map dox : Dox<cr>
 
 
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
