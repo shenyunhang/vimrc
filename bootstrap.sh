@@ -194,7 +194,7 @@ program_must_exist "cmake"
 program_must_exist "pep8" "you can install with pip: pip install pep8"
 #program_must_exist "autopep8" "you can install with pip: pip install autopep8"
 program_must_exist "yapf" "you can install with pip: pip install yapf"
-program_must_exist "powerline"
+program_must_exist "powerline" "pip install git+git://github.com/powerline/powerline"
 
 msg             "Going to install Jedi - an awesome autocompletion/static analysis library for Python"
 sudo pip install jedi
