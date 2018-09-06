@@ -141,6 +141,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 
+set encoding=utf-8
 set nu
 set cul
 set ruler
