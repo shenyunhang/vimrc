@@ -236,6 +236,10 @@ cd $HOME/.vim/bundle/YouCompleteMe/
 lnif "$APP_PATH/.ycm_extra_conf.py"         "$HOME/.ycm_extra_conf.py"
 #编译youcompleteme插件
 
+# ctags
 msg             "\n请使用ctags生成c/c++头文件索引：\nctags -R -f ~/.vim/systags --c-kinds=+p --fields=+S /usr/include /usr/local/include"
+cd ~
+ctags -R -f ~/.vim/systags --c-kinds=+p --fields=+S /usr/include /usr/local/include
+
 msg             "\nThanks for installing $app_name."
 msg             "© `date +%Y` http://121.192.180.179"
