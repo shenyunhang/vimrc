@@ -14,6 +14,9 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+set -x
+set -e
+
 ############################  SETUP PARAMETERS
 app_name='shenyunhang-vimrc'
 [ -z "$APP_PATH" ] && APP_PATH="$HOME/.shenyunhang-vimrc"
