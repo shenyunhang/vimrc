@@ -233,6 +233,8 @@ setup_vundle    "$APP_PATH/.vimrc.bundles.default"
 #编译youcompleteme插件
 msg "编译YouCompleteMe插件"
 cd $HOME/.vim/bundle/YouCompleteMe/
+git checkout d556a43c1af6a4e4075e875934e250f589df0dee
+git submodule update --init --recursive
 #./install.py
 ./install.py --clang-completer
 #./install.py --clang-completer --system-libclang
