@@ -2,6 +2,12 @@
 针对C++/Python的Vim配置
 
 ### 安装方法
+安装VIM以及此配置
+```bash
+mkdir -p ~/Documents && cd ~/Documents && git clone https://github.com/shenyunhang/linux_configure_scripts.git && cd linux_configure_scripts && bash vim.sh
+```
+
+只安装此配置
 ```bash
 sh <(curl https://raw.github.com/shenyunhang/vimrc/master/bootstrap.sh -L)
 ```

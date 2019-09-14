@@ -14,6 +14,9 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+set -x
+set -e
+
 ############################  SETUP PARAMETERS
 app_name='shenyunhang-vimrc'
 [ -z "$APP_PATH" ] && APP_PATH="$HOME/.shenyunhang-vimrc"
@@ -230,9 +233,11 @@ setup_vundle    "$APP_PATH/.vimrc.bundles.default"
 #编译youcompleteme插件
 msg "编译YouCompleteMe插件"
 cd $HOME/.vim/bundle/YouCompleteMe/
+git checkout d556a43c1af6a4e4075e875934e250f589df0dee
+git submodule update --init --recursive
 #./install.py
-#./install.py --clang-completer
-./install.py --clang-completer --system-libclang
+./install.py --clang-completer
+#./install.py --clang-completer --system-libclang
 lnif "$APP_PATH/.ycm_extra_conf.py"         "$HOME/.ycm_extra_conf.py"
 #编译youcompleteme插件
 
