@@ -16,7 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'davidhalter/jedi-vim'
@@ -38,6 +38,8 @@ Plugin 'joshdick/onedark.vim'
 Plugin 'wesQ3/vim-windowswap'
 
 Plugin 'jiangmiao/auto-pairs'
+
+Plugin 'rickhowe/diffchar.vim'
 
 "doc/NERD_commenter.txt
 " plugin from http://vim-scripts.org/vim/scripts.html
