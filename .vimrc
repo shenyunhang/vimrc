@@ -40,6 +40,7 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'rickhowe/diffchar.vim'
+Plugin 'severin-lemaignan/vim-minimap'
 
 "doc/NERD_commenter.txt
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -303,6 +304,6 @@ let g:DoxygenToolkit_licenseTag="YH license"
 map dox : Dox<cr>
 
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
