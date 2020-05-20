@@ -220,8 +220,9 @@ func FoldFile()
 endfunc
 "end FoldFile
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Plugin 'nathanaelkane/vim-indent-guides'设置
+"Plugin 'nathanaelkane/vim-indent-guides'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:indent_guides_enable_on_vim_startup=1
 "let g:indent_guides_start_level=2
@@ -229,13 +230,21 @@ endfunc
 "hi IndentGuidesEven ctermbg=darkgrey
 "let g:indent_guides_auto_colors = 1
 "let g:indent_guides_guide_size = 1
+"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Plugin 'davidhalter/jedi-vim'设置
+"Plugin 'davidhalter/jedi-vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "let g:jedi#popup_on_dot = 0
 "let g:jedi#show_call_signatures = "2"
 "let g:jedi#use_splits_not_buffers = "right"
+"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Plugin 'majutsushi/tagbar'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tagbar_left = 1
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
