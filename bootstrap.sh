@@ -192,15 +192,15 @@ variable_set "$HOME"
 program_must_exist "vim"
 program_must_exist "git"
 program_must_exist "ctags"
-program_must_exist "pip"
+program_must_exist "pip3"
 program_must_exist "cmake"
-program_must_exist "pep8" "you can install with pip: pip install pep8"
-#program_must_exist "autopep8" "you can install with pip: pip install autopep8"
-program_must_exist "yapf" "you can install with pip: pip install yapf"
-program_must_exist "powerline" "pip install git+git://github.com/powerline/powerline"
+program_must_exist "pep8" "you can install with pip3: pip3 install pep8"
+#program_must_exist "autopep8" "you can install with pip3: pip3 install autopep8"
+program_must_exist "yapf" "you can install with pip3: pip3 install yapf"
+program_must_exist "powerline" "pip3 install git+git://github.com/powerline/powerline"
 
 msg             "Going to install Jedi - an awesome autocompletion/static analysis library for Python"
-sudo pip install jedi
+sudo pip3 install jedi
 
 
 do_backup       "$HOME/.vim" \
@@ -235,9 +235,9 @@ msg "编译YouCompleteMe插件"
 cd $HOME/.vim/bundle/YouCompleteMe/
 git checkout d556a43c1af6a4e4075e875934e250f589df0dee
 git submodule update --init --recursive
-#./install.py
-./install.py --clang-completer
-#./install.py --clang-completer --system-libclang
+#python3 ./install.py
+python3 ./install.py --clang-completer
+#python3 ./install.py --clang-completer --system-libclang
 lnif "$APP_PATH/.ycm_extra_conf.py"         "$HOME/.ycm_extra_conf.py"
 #编译youcompleteme插件
 
