@@ -194,10 +194,14 @@ program_must_exist "git"
 program_must_exist "ctags"
 program_must_exist "pip3"
 program_must_exist "cmake"
-program_must_exist "pep8" "you can install with pip3: pip3 install pep8"
+#program_must_exist "pep8" "you can install with pip3: pip3 install pep8"
+sudo pip3 install pep8
 #program_must_exist "autopep8" "you can install with pip3: pip3 install autopep8"
-program_must_exist "yapf" "you can install with pip3: pip3 install yapf"
-program_must_exist "powerline" "pip3 install git+git://github.com/powerline/powerline"
+sudo pip3 install autopep8
+#program_must_exist "yapf" "you can install with pip3: pip3 install yapf"
+sudo pip3 install yapf
+#program_must_exist "powerline" "pip3 install git+git://github.com/powerline/powerline"
+sudo pip3 install git+git://github.com/powerline/powerline
 
 msg             "Going to install Jedi - an awesome autocompletion/static analysis library for Python"
 sudo pip3 install jedi
