@@ -240,6 +240,9 @@ endfunc
 "let g:jedi#show_call_signatures = "2"
 "let g:jedi#use_splits_not_buffers = "right"
 "
+"
+
+let g:tex_flavor = 'tex'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Plugin 'majutsushi/tagbar'
