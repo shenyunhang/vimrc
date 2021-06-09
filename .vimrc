@@ -115,11 +115,13 @@ set background=dark
 "set background=light
 "colorscheme default
 "colorscheme solarized
-colorscheme molokai
+"colorscheme molokai
 "colorscheme onedark
 "colorscheme github
+colorscheme apprentice
 
 if &diff
+	syntax off
 	colorscheme github
 endif
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
