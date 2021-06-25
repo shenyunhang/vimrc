@@ -242,7 +242,9 @@ git submodule update --init --recursive
 #python3 ./install.py
 python3 ./install.py --clang-completer
 #python3 ./install.py --clang-completer --system-libclang
-lnif "$APP_PATH/.ycm_extra_conf.py"         "$HOME/.ycm_extra_conf.py"
+#lnif "$APP_PATH/.ycm_extra_conf.py"         "$HOME/.ycm_extra_conf.py"
+cd ~
+wget https://raw.githubusercontent.com/ycm-core/ycmd/master/.ycm_extra_conf.py
 #编译youcompleteme插件
 
 # ctags
