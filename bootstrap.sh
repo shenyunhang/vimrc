@@ -195,16 +195,16 @@ program_must_exist "ctags"
 program_must_exist "pip3"
 program_must_exist "cmake"
 #program_must_exist "pep8" "you can install with pip3: pip3 install pep8"
-pip3 install pep8
+pip3 install pep8 --break-system-packages
 #program_must_exist "autopep8" "you can install with pip3: pip3 install autopep8"
-pip3 install autopep8
+pip3 install autopep8 --break-system-packages
 #program_must_exist "yapf" "you can install with pip3: pip3 install yapf"
-pip3 install yapf
+pip3 install yapf --break-system-packages
 #program_must_exist "powerline" "pip3 install git+git://github.com/powerline/powerline"
-pip3 install git+git://github.com/powerline/powerline
+pip3 install git+https://github.com/powerline/powerline
 
 msg             "Going to install Jedi - an awesome autocompletion/static analysis library for Python"
-pip3 install jedi
+pip3 install jedi --break-system-packages
 
 
 do_backup       "$HOME/.vim" \
